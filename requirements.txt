@@ -1,4 +1,5 @@
 streamlit==1.45.0
-torch==2.7.1+cu128
-torchvision==0.22.1+cu128
-pillow==11.1.0
+torch==2.7.1
+torchvision==0.18.1
+Pillow==10.4.0
+numpy==2.1.1
