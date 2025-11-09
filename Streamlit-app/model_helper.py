@@ -3,6 +3,7 @@ import torch
 from openpyxl.styles.builtins import output
 from torch import nn
 from torchvision import models,transforms
+import os
 
 trained_model = None
 
@@ -42,7 +43,8 @@ def predict(image_path):
 
     if trained_model is None:
         trained_model = CarClassifierResNet()
-        trained_model.load_state_dict(torch.load("model\saved_model.pth"))
+        model_path = os.path.join(os.path.dirname(__file__), "model", "saved_model.pth")
+        trained_model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
         trained_model.eval()
 
     with torch.no_grad():
