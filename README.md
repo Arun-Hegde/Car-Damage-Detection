@@ -79,4 +79,4 @@ Project-Car-Damage-Detection/
 
 ✅ Supports JPG, PNG, and JPEG formats.
 
-🌐 Try it live: https://car-damage-detection-arun-hegde.streamlit.app/
+🌐 Try it live: [Live Demo](https://car-damage-detection-arun-hegde.streamlit.app/)
