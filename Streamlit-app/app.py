@@ -2,6 +2,18 @@ import streamlit as st
 from model_helper import predict
 from PIL import Image
 import time
+import os
+import asyncio
+
+# Fix missing event loop in Python 3.13
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
+# Prevent Streamlit file watcher errors
+os.environ["STREAMLIT_WATCHER_TYPE"] = "poll"
+os.environ["STREAMLIT_WATCHER_IGNORE_MODULES"] = "torch"
 
 # Page setup
 st.set_page_config(page_title="Vehicle Damage Detection", page_icon="🚘", layout="centered")
