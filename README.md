@@ -6,6 +6,22 @@ This Streamlit web app allows you to **upload or drag & drop** an image of a car
 
 ---
 
+## 🏗️ Architecture
+
+![Architecture Diagram](./architecture.png)
+
+The system uses deep learning for automated damage detection:
+
+1. **Image Upload (Streamlit)**: User uploads vehicle image
+2. **Image Preprocessing**: Resize and normalize input image
+3. **ResNet50 CNN Model**: Transfer learning model analyzes damage
+4. **Classification**: Predicts one of 6 damage categories
+   - Front Normal / Front Crushed / Front Breakage
+   - Rear Normal / Rear Crushed / Rear Breakage
+5. **Result Display**: Shows prediction with confidence score
+
+---
+
 ## 🧠 Model Overview  
 
 This project uses **transfer learning with ResNet50** to classify vehicle damage from images.  
@@ -39,7 +55,7 @@ Follow these steps to run the app locally:
 
 ### 1. Clone the Repository  
 ```bash
-git clone https://github.com/yourusername/vehicle-damage-detection.git
+git clone https://github.com/arunhegde_18/vehicle-damage-detection.git
 cd vehicle-damage-detection
 ```
 ### 2. Install Dependencies
@@ -79,4 +95,11 @@ Project-Car-Damage-Detection/
 
 ✅ Supports JPG, PNG, and JPEG formats.
 
-🌐 Try it live: [Live Demo](https://car-damage-detection-arun-hegde.streamlit.app/)
+## 🤝 Connect
+
+- **GitHub**: [arunhegde_18](https://github.com/arunhegde_18)
+- **Email**: arunhegde697@gmail.com
+
+---
+
+⭐ If you find this project useful, please consider giving it a star on GitHub!
